@@ -1,0 +1,4 @@
+node_modules
+browser.js*
+index.d.ts
+tsconfig.tsbuildinfo
