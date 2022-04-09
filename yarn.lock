@@ -989,8 +989,10 @@
   resolved "https://registry.yarnpkg.com/@discoveryjs/json-ext/-/json-ext-0.5.6.tgz#d5e0706cf8c6acd8c6032f8d54070af261bbbb2f"
   integrity sha512-ws57AidsDvREKrZKYffXddNkyaF14iHNHm8VQnZH6t99E8gczjNN0GpvcGny0imC80yQ0tHz1xVUKk/KFQSUyA==
 
-"@featurescope/node-sdk@../featurescope-node-sdk":
+"@featurescope/node-sdk@^0.0.1":
   version "0.0.1"
+  resolved "https://npm.pkg.github.com/download/@featurescope/node-sdk/0.0.1/dff28fac04d1b11514a9a3e1a165f1ed6d95a03bda9a3bbb06f58069687a8e43#b4855ebca0b1c9bf5f8f638766bb4635eea57290"
+  integrity sha512-3tKxRdGxU5lNUi+rcCizX4IEyvGVp4980+W06zzVf1QJCZJI2WfvUf2hbKJ7bAfN3/UoyYUElmCY8EsFlMCQ4g==
   dependencies:
     cross-fetch "^3.1.5"
 

@@ -39,7 +39,7 @@
     "webpack-cli": "^4.9.2"
   },
   "dependencies": {
-    "@featurescope/node-sdk": "../featurescope-node-sdk"
+    "@featurescope/node-sdk": "^0.0.1"
   },
   "peerDependencies": {
     "react": "^17",
