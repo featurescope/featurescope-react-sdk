@@ -20,7 +20,7 @@ export type FeaturesProviderProps = {
 export const FeaturesContext = createContext({})
 
 export const FeaturesProvider = ({
-  apiKey,
+  apiKey = null,
   children,
   defaultFeatures = {},
   demographics = {},
