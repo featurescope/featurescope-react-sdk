@@ -43,8 +43,6 @@ export const FeaturesProvider = ({
   )
 }
 
-console.log(FeaturesProvider)
-
 export const useFeature = (featureId: string): JsonValue => {
   const features = useContext(FeaturesContext)
   return features[featureId] ?? null
