@@ -9,6 +9,9 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
   },
+  "repository": {
+    "url": "https://github.com/featurescope/featurescope-react-sdk"
+  },
   "scripts": {
     "prebuild": "rimraf browser.js index.d.ts tsconfig.tsbuildinfo",
     "build": "webpack",
