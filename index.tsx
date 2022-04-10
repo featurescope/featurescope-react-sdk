@@ -5,7 +5,7 @@ import {
   useContext,
   useEffect,
   useMemo,
-  useState,
+  // useState,
 } from "react"
 
 export type FeaturesProviderProps = {
@@ -27,14 +27,15 @@ export const FeaturesProvider = ({
   featureIds,
   scope = "_",
 }: FeaturesProviderProps) => {
-  const client = useMemo(() => init({ apiKey }), [apiKey])
-  const [features, setFeatures] = useState(defaultFeatures)
+  // const client = useMemo(() => init({ apiKey }), [apiKey])
+  const client = init({ apiKey })
+  const [features, setFeatures] = useContext(FeaturesContext)
 
   useEffect(() => {
     client
       .findFeaturesListVariationsByDemographics(scope, featureIds, demographics)
       .then(setFeatures)
-  }, [demographics, featureIds])
+  }, [scope, demographics, featureIds])
 
   return (
     <FeaturesContext.Provider value={features}>
