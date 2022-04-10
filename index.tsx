@@ -5,7 +5,7 @@ import {
   useContext,
   useEffect,
   useMemo,
-  // useState,
+  useState,
 } from "react"
 
 export type FeaturesProviderProps = {
@@ -29,7 +29,7 @@ export const FeaturesProvider = ({
 }: FeaturesProviderProps) => {
   // const client = useMemo(() => init({ apiKey }), [apiKey])
   const client = init({ apiKey })
-  const [features, setFeatures] = useContext(FeaturesContext)
+  const [features, setFeatures] = useState(FeaturesContext)
 
   useEffect(() => {
     client
