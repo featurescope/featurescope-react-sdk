@@ -1,6 +1,6 @@
 {
   "name": "@featurescope/react-sdk",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "",
   "main": "browser.js",
   "module": "index.tsx",
