@@ -8,7 +8,7 @@
     "incremental": true,
     "isolatedModules": true,
     "jsx": "react-jsx",
-    "module": "es2015",
+    "module": "commonjs",
     "moduleResolution": "node",
     "removeComments": true,
     "resolveJsonModule": true,
