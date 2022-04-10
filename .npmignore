@@ -1,4 +1,7 @@
 .gitignore
+.npmrc
+.nvmrc
+.yarnrc
 tsconfig.json
 tsconfig.tsbuildinfo
 webpack.config.js

@@ -5,7 +5,9 @@ module.exports = {
     main: "./index.tsx",
   },
   externals: {
-    React: "react",
+    react: "React",
+    "react-dom": "ReactDOM",
+    "react-router": "ReactRouter",
   },
   module: {
     rules: [
@@ -25,6 +27,7 @@ module.exports = {
   output: {
     path: __dirname,
     filename: "browser.js",
+    libraryTarget: "commonjs",
   },
   resolve: {
     extensions: [".ts", ".tsx", ".js", ".jsx"],
