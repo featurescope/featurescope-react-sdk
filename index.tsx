@@ -1,4 +1,4 @@
-import { JsonValue, init } from "@featurescope/node-sdk"
+import { Features, JsonValue, init } from "@featurescope/node-sdk"
 import {
   createContext,
   ReactNode,
@@ -9,15 +9,15 @@ import {
 } from "react"
 
 export type FeaturesProviderProps = {
-  apiKey: string
+  apiKey: string | null
   children?: ReactNode
-  defaultFeatures?: Record<string, JsonValue>
+  defaultFeatures?: Features
   demographics?: Record<string, string>
   featureIds?: Array<string>
   scope?: string
 }
 
-export const FeaturesContext = createContext({})
+export const FeaturesContext = createContext<Features>({})
 
 export const FeaturesProvider = ({
   apiKey = null,
@@ -27,9 +27,8 @@ export const FeaturesProvider = ({
   featureIds,
   scope = "_",
 }: FeaturesProviderProps) => {
-  // const client = useMemo(() => init({ apiKey }), [apiKey])
-  const client = init({ apiKey })
-  const [features, setFeatures] = useState(FeaturesContext)
+  const client = useMemo(() => init({ apiKey }), [apiKey])
+  const [features, setFeatures] = useState(defaultFeatures)
 
   useEffect(() => {
     client
@@ -53,7 +52,7 @@ export const useFeatures = (featureIds?: Array<string>): JsonValue => {
   const features = useContext(FeaturesContext)
 
   if (Array.isArray(featureIds)) {
-    const filteredFeatures = {}
+    const filteredFeatures: Features = {}
 
     for (const featureId in features) {
       if (features.hasOwnProperty(featureId)) {

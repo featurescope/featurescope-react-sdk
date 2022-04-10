@@ -2,6 +2,7 @@
 .npmrc
 .nvmrc
 .yarnrc
+index.tsx
 tsconfig.json
 tsconfig.tsbuildinfo
 webpack.config.js

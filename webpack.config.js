@@ -1,9 +1,13 @@
 module.exports = {
-  mode: "development",
   devtool: false,
   entry: {
     main: "./index.tsx",
   },
+  externals: {
+    react: "React",
+    "react-dom": "ReactDOM",
+  },
+  mode: "production",
   module: {
     rules: [
       {

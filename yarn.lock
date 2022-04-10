@@ -977,10 +977,10 @@
   resolved "https://registry.npmjs.org/@discoveryjs/json-ext/-/json-ext-0.5.6.tgz"
   integrity sha512-ws57AidsDvREKrZKYffXddNkyaF14iHNHm8VQnZH6t99E8gczjNN0GpvcGny0imC80yQ0tHz1xVUKk/KFQSUyA==
 
-"@featurescope/node-sdk@^0.0.2":
-  version "0.0.2"
-  resolved "https://npm.pkg.github.com/download/@featurescope/node-sdk/0.0.2/347d189ebefb3b5e3ca5b0a1dfe2eba0b00e398a83a387bbeae5e35fb92787e4"
-  integrity sha512-sA9ydXl0JoVTQWcXy5EusAzNPPYFigohpWrfUC9kIbHWZMQ6OQJHp95i/5ZjIs6AFyPsiRcFrd/gEiwrN9/x9A==
+"@featurescope/node-sdk@^0.0.3":
+  version "0.0.3"
+  resolved "https://npm.pkg.github.com/download/@featurescope/node-sdk/0.0.3/e34a7b4f9f6c631c2a47c6d16c5cb88f92c8a878be2cb4ad1406e73c1ab12506#9f45226a284a8964fcd62de5177c1774d7fff6b2"
+  integrity sha512-ZJc7KT073aykomfs5nAWsq49fqZs5wKiTIlG9ONs3kq7G1Zvq5Jc0a9FWjVmrYI3lyJ37VsRSupSBQB/ULI0Qg==
   dependencies:
     cross-fetch "^3.1.5"
 
@@ -1037,6 +1037,25 @@
   version "12.20.46"
   resolved "https://registry.npmjs.org/@types/node/-/node-12.20.46.tgz"
   integrity sha512-cPjLXj8d6anFPzFvOPxS3fvly3Shm5nTfl6g8X5smexixbuGUf7hfr21J5tX9JW+UPStp/5P5R8qrKL5IyVJ+A==
+
+"@types/prop-types@*":
+  version "15.7.5"
+  resolved "https://registry.yarnpkg.com/@types/prop-types/-/prop-types-15.7.5.tgz#5f19d2b85a98e9558036f6a3cacc8819420f05cf"
+  integrity sha512-JCB8C6SnDoQf0cNycqd/35A7MjcnK+ZTqE7judS6o7utxUCg6imJg3QK2qzHKszlTjcj2cn+NwMB2i96ubpj7w==
+
+"@types/react@^17.0.2":
+  version "17.0.44"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-17.0.44.tgz#c3714bd34dd551ab20b8015d9d0dbec812a51ec7"
+  integrity sha512-Ye0nlw09GeMp2Suh8qoOv0odfgCoowfM/9MG6WeRD60Gq9wS90bdkdRtYbRkNhXOpG4H+YXGvj4wOWhAC0LJ1g==
+  dependencies:
+    "@types/prop-types" "*"
+    "@types/scheduler" "*"
+    csstype "^3.0.2"
+
+"@types/scheduler@*":
+  version "0.16.2"
+  resolved "https://registry.yarnpkg.com/@types/scheduler/-/scheduler-0.16.2.tgz#1a62f89525723dde24ba1b01b092bf5df8ad4d39"
+  integrity sha512-hppQEBDmlwhFAXKJX2KnWLYu5yMfi91yazPb2l+lbJiwW+wdo1gNeRA+3RgNSO39WYX2euey41KEwnqesU2Jew==
 
 "@webassemblyjs/ast@1.11.1":
   version "1.11.1"
@@ -1396,6 +1415,11 @@ cross-spawn@^7.0.3:
     path-key "^3.1.0"
     shebang-command "^2.0.0"
     which "^2.0.1"
+
+csstype@^3.0.2:
+  version "3.0.11"
+  resolved "https://registry.yarnpkg.com/csstype/-/csstype-3.0.11.tgz#d66700c5eacfac1940deb4e3ee5642792d85cd33"
+  integrity sha512-sa6P2wJ+CAbgyy4KFssIb/JNMLxFvKF1pCYCSXS8ZMuqZnMsrxqI2E5sPyoTpxoPU/gVZMzr2zjOfg8GIZOMsw==
 
 debug@^4.1.0, debug@^4.1.1:
   version "4.3.3"
