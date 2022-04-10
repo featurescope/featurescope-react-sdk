@@ -10,6 +10,7 @@ import {
 
 export type FeaturesProviderProps = {
   apiKey: string | null
+  apiUrl?: string
   children?: ReactNode
   defaultFeatures?: Features
   demographics?: Record<string, string>
@@ -21,13 +22,14 @@ export const FeaturesContext = createContext<Features>({})
 
 export const FeaturesProvider = ({
   apiKey = null,
+  apiUrl,
   children,
   defaultFeatures = {},
   demographics = {},
   featureIds,
   scope = "_",
 }: FeaturesProviderProps) => {
-  const client = useMemo(() => init({ apiKey }), [apiKey])
+  const client = useMemo(() => init({ apiKey, apiUrl }), [apiKey, apiUrl])
   const [features, setFeatures] = useState(defaultFeatures)
 
   useEffect(() => {
