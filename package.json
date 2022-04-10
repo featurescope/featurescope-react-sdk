@@ -1,6 +1,6 @@
 {
   "name": "@featurescope/react-sdk",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "",
   "main": "index.js",
   "types": "index.d.ts",
@@ -12,8 +12,8 @@
   },
   "scripts": {
     "prebuild": "rimraf browser.js index.d.ts index.js tsconfig.tsbuildinfo",
-    "build": "tsc index.tsx && webpack --mode=development",
-    "prepublishOnly": "tsc index.tsx && webpack --mode=production",
+    "build": "tsc && webpack --mode=development",
+    "prepublishOnly": "tsc && webpack --mode=production",
     "test": "exit 0"
   },
   "author": "",
