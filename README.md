@@ -1,8 +1,8 @@
 # @featurescope/react-sdk
 
-Featurescope ...
-
 React SDK for [featurescope](https://www.featurescope.io "featurescope").
+
+Featurescope ...
 
 ## Installation
 
@@ -95,7 +95,7 @@ const Navigation = ({ children }) => {
 
 ### Provider Props
 
-Here are all of the available props on the `FeaturesProvider`:
+This table includes all of the available props on the `FeaturesProvider`:
 
 | name            | description                                                                                                                                          | type           | default                       |
 | --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | -------------- | ----------------------------- |

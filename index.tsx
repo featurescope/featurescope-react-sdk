@@ -29,14 +29,17 @@ export const FeaturesProvider = ({
   featureIds,
   scope = "_",
 }: FeaturesProviderProps) => {
-  const client = useMemo(() => init({ apiKey, apiUrl }), [apiKey, apiUrl])
+  const client = useMemo(
+    () => init({ apiKey, apiUrl, scope }),
+    [apiKey, apiUrl, scope],
+  )
   const [currentFeatures, setFeatures] = useState(defaultFeatures)
 
   useEffect(() => {
     client
-      .findFeaturesListVariationsByDemographics(scope, featureIds, demographics)
+      .getFeatures(demographics, { featureIds })
       .then((features) => setFeatures({ ...currentFeatures, ...features }))
-  }, [scope, demographics, featureIds])
+  }, [scope, featureIds, demographics])
 
   return (
     <FeaturesContext.Provider value={currentFeatures}>
