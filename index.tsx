@@ -1,4 +1,4 @@
-import { Features, JsonValue, init } from "@featurescope/node-sdk"
+import { Features, JsonValue, init, Demographics } from "@featurescope/node-sdk"
 import {
   createContext,
   ReactNode,
@@ -13,7 +13,7 @@ export type FeaturesProviderProps = {
   apiUrl?: string
   children?: ReactNode
   defaultFeatures?: Features
-  demographics?: Record<string, string>
+  demographics?: Demographics
   featureIds?: Array<string>
   scope?: string
 }
@@ -30,16 +30,16 @@ export const FeaturesProvider = ({
   scope = "_",
 }: FeaturesProviderProps) => {
   const client = useMemo(() => init({ apiKey, apiUrl }), [apiKey, apiUrl])
-  const [features, setFeatures] = useState(defaultFeatures)
+  const [currentFeatures, setFeatures] = useState(defaultFeatures)
 
   useEffect(() => {
     client
       .findFeaturesListVariationsByDemographics(scope, featureIds, demographics)
-      .then(setFeatures)
+      .then((features) => setFeatures({ ...currentFeatures, ...features }))
   }, [scope, demographics, featureIds])
 
   return (
-    <FeaturesContext.Provider value={features}>
+    <FeaturesContext.Provider value={currentFeatures}>
       {children}
     </FeaturesContext.Provider>
   )
