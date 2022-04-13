@@ -1,4 +1,4 @@
-import { Features, JsonValue, init, Demographics } from "@featurescope/node-sdk"
+import { Attributes, Features, JsonValue, init } from "@featurescope/node-sdk"
 import {
   createContext,
   ReactNode,
@@ -11,9 +11,10 @@ import {
 export type FeaturesProviderProps = {
   apiKey: string | null
   apiUrl?: string
+  attributes?: Attributes
   children?: ReactNode
   defaultFeatures?: Features
-  demographics?: Demographics
+
   featureIds?: Array<string>
   scope?: string
 }
@@ -23,9 +24,9 @@ export const FeaturesContext = createContext<Features>({})
 export const FeaturesProvider = ({
   apiKey = null,
   apiUrl,
+  attributes = {},
   children,
   defaultFeatures = {},
-  demographics = {},
   featureIds,
   scope = "_",
 }: FeaturesProviderProps) => {
@@ -37,9 +38,9 @@ export const FeaturesProvider = ({
 
   useEffect(() => {
     client
-      .getFeatures(demographics, { featureIds })
+      .getFeatures(attributes, { featureIds })
       .then((features) => setFeatures({ ...currentFeatures, ...features }))
-  }, [scope, featureIds, demographics])
+  }, [scope, featureIds, attributes])
 
   return (
     <FeaturesContext.Provider value={currentFeatures}>

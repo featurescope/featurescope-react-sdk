@@ -977,10 +977,10 @@
   resolved "https://registry.npmjs.org/@discoveryjs/json-ext/-/json-ext-0.5.6.tgz"
   integrity sha512-ws57AidsDvREKrZKYffXddNkyaF14iHNHm8VQnZH6t99E8gczjNN0GpvcGny0imC80yQ0tHz1xVUKk/KFQSUyA==
 
-"@featurescope/node-sdk@^0.0.6":
-  version "0.0.6"
-  resolved "https://npm.pkg.github.com/download/@featurescope/node-sdk/0.0.6/ce69487885da17c85ead76db5f5fac5967b9fb79c4b75ff96fda34b1eb2cf9c7#deedf988eb0058c72b364932ee7cb018667c3b18"
-  integrity sha512-kjK35/PbtRTx/98GKTY4NZ/rnMl9BvFD3l82wa7icwsgRteDDl816TXqSb+iwRgsGXyIUHA2hPk6PT9d2REH0A==
+"@featurescope/node-sdk@^0.0.7":
+  version "0.0.7"
+  resolved "https://npm.pkg.github.com/download/@featurescope/node-sdk/0.0.7/d50954cc7b4576f65cd707e215d0e54383281d4074845ac84e08766783f34a42#1780434ce094834ab98f59ff37053ddf68f95919"
+  integrity sha512-BkPaui6dRru0/lu3VtNneNrR44opP2t//PbTNObbGRM5CNHvGuiDoI2jp3b028jLiy+ES9SSnp8CkLzNazK//w==
   dependencies:
     cross-fetch "^3.1.5"
 
