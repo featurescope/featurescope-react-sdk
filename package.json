@@ -1,6 +1,6 @@
 {
   "name": "@featurescope/react-sdk",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "React SDK for featurescope.",
   "main": "index.js",
   "types": "index.d.ts",
