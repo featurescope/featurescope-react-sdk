@@ -1,3 +1,4 @@
+import React from "react"
 import { Attributes, Features, JsonValue, init } from "@featurescope/node-sdk"
 import {
   createContext,
@@ -30,6 +31,7 @@ export const FeaturesProvider = ({
   featureIds,
   scope = "_",
 }: FeaturesProviderProps) => {
+  const [currentAttributes, setAttributes] = useState(attributes)
   const client = useMemo(
     () => init({ apiKey, apiUrl, scope }),
     [apiKey, apiUrl, scope],
@@ -37,10 +39,17 @@ export const FeaturesProvider = ({
   const [currentFeatures, setFeatures] = useState(defaultFeatures)
 
   useEffect(() => {
+    setAttributes((currentAttributes) => ({
+      ...currentAttributes,
+      ...attributes,
+    }))
+  }, Object.values(attributes)) // eslint-disable-line react-hooks/exhaustive-deps
+
+  useEffect(() => {
     client
-      .getFeatures(attributes, { featureIds })
+      .getFeatures(currentAttributes, { featureIds })
       .then((features) => setFeatures({ ...currentFeatures, ...features }))
-  }, [scope, featureIds, attributes])
+  }, [client, currentAttributes, scope, featureIds]) // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <FeaturesContext.Provider value={currentFeatures}>
